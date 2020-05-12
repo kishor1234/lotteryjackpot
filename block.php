@@ -13,7 +13,7 @@ $sql = "select * FROM user where id='{$_POST["id"]}'";
 $result = $mysqli->query($sql);
 $row = $result->fetch_assoc();
 if ($row["block"] === "1") {
-    $starttimestamp = strtotime(data["H:i:s"]);
+    $starttimestamp = strtotime(date("H:i:s"));
     //$endtimestamp = strtotime($row["blocktime"]);
     $difference = (int)strtotime($row["blocktime"])-(int)strtotime(date("H:i:s"));
     echo json_encode(array("status"=>"1","diff"=>$difference));

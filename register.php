@@ -9,7 +9,7 @@ session_start();
 
 if(isset($_SESSION["id"]))
 {
-    header("Location: /TestLotteryJackpot/dashboard.php");
+    header("Location: dashboard.php");
     
 }
 if(isset($_POST["register"]))

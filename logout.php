@@ -8,4 +8,4 @@
 
 session_start();
 session_destroy();
-header("Location: /TestLotteryJackpot/index.php");
+header("Location: index.php");

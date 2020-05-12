@@ -8,7 +8,7 @@ and open the template in the editor.
 session_start();
 
 if (isset($_SESSION["id"])) {
-    header("Location: /TestLotteryJackpot/dashboard.php");
+    header("Location: dashboard.php");
 }
 if (isset($_POST["login"])) {
     include 'config.php';
@@ -19,7 +19,7 @@ if (isset($_POST["login"])) {
         $row = $result->fetch_assoc();
         $_SESSION["email"] = $_POST["email"];
         $_SESSION["id"] = $row["id"];
-        header("Location: /TestLotteryJackpot/dashboard.php");
+        header("Location: dashboard.php");
     } else {
         echo $msg = "faile";
     }
