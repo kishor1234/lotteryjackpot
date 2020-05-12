@@ -7,11 +7,11 @@
  */
 $_mysqliConfiguration = array(
     "host" => "localhost",
-    "post" => "3306",
+    "port" => "3307",
     "username" => "root",
     "password" => "root@123",
     "database" => "jackpot",
     "socket" => ""
 );
 
-$mysqli = new mysqli($_mysqliConfiguration["host"], $_mysqliConfiguration["username"], $_mysqliConfiguration["password"], $_mysqliConfiguration["database"]);
+$mysqli = new mysqli($_mysqliConfiguration["host"].":".$_mysqliConfiguration["port"], $_mysqliConfiguration["username"], $_mysqliConfiguration["password"], $_mysqliConfiguration["database"]);
